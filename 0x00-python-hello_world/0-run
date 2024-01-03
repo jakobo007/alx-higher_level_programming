@@ -8,4 +8,4 @@ if [ ! -f "$PY_FILE" ]; then
 echo "Error; Python script file $PY_FILE not found"
 exit 1
 fi
-python3 "$PY_FILE"
+python3 $PY_FILE
