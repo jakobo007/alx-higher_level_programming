@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Assign the value of the environment variable PYCODE to PY_CODE
+PY_CODE="$PYCODE"
+
+# Create a temporary Python script file with a unique name
+TMP_PY_FILE=$(mktemp /tmp/temp_script_XXXXXX.py)
+
+# Write the content of PY_CODE to the temporary Python script file
+echo "$PY_CODE" > "$TMP_PY_FILE"
+
+# Execute the Python script using python3
+python3 "$TMP_PY_FILE"
+
+# Remove the temporary Python script file after execution
+rm "$TMP_PY_FILE"
+
