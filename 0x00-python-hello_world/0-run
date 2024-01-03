@@ -1,0 +1,11 @@
+#!/bin/bash
+PY_FILE="$PYFILE"
+if [ -z "$PY_FILE" ]; then
+echo "Error: Environment variable is not set."
+exit 1
+fi
+if [ ! -f "$PY_FILE" ]; then
+echo "Error; Python script file $PY_FILE not found"
+exit 1
+fi
+python3 "$PY_FILE"
