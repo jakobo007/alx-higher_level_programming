@@ -5,6 +5,4 @@ def uniq_add(my_list=[]):
         if x not in uniq_num:
             uniq_num.add(x)
 
-            total = sum(uniq_num)
-
-        return total
+        return sum(uniq_num)
