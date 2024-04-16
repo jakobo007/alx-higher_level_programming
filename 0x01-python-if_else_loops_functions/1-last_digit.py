@@ -2,7 +2,7 @@
 import random
 number = random.randint(-10000, 10000)
 #if (number % 2 == 0):
-reminder = (number % 2)
+reminder = (number % 10)
 if reminder > 5:
     print("The last digit of {} is {} and is greater than 5".format(number, reminder))
 elif reminder == 0:
