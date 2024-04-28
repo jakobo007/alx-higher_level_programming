@@ -2,5 +2,5 @@
 '''Python empty class'''
 class Square:
     def Square(self):
-        pass
+        return(self)
     
