@@ -1,6 +1,9 @@
 #!/usr/bin/python3
-"""Define a class with private instance and a public method"""
+"""A python class with private instance"""
+
 class Square:
+    """Private instance attribute size"""
+
     def __init__(self, size=0):
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
@@ -10,4 +13,4 @@ class Square:
             self.__size = size
     
     def area(self):
-         return self.__size * self.__size
+        return (self.__size ** 2)
