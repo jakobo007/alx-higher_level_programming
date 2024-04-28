@@ -9,7 +9,7 @@ try:
     print(my_square.size)
 except Exception as e:
     print(e)
-    
+
 try:
     print(my_square.__size)
 except Exception as e:
