@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Define a class with inastantiation and raise error"""
 class Square:
     def __init__(self, size=0):
         if not isinstance(size, int):

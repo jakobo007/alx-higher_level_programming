@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Define a class with private instance and a public method"""
 class Square:
     def __init__(self, size=0):
         if not isinstance(size, int):
