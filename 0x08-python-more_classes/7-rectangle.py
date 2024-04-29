@@ -39,7 +39,7 @@ class Rectangle:
             self.__height = value
 
     def area(self):
-        return self.__height * self.__width
+       return self.__height * self.__width
 
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
@@ -55,7 +55,6 @@ class Rectangle:
             rect_str += str(self.print_symbol) * self.__width + '\n'
         rect_str += str(self.print_symbol) * self.__width
         return rect_str
-
 
     def __repr__(self):
         return f'Rectangle({self.__width}, {self.__height})'
