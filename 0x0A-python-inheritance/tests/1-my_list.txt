@@ -19,4 +19,8 @@
 [-1, 10, -10, -7, 7]
 >>> list.print_sorted()
 [-10, -7, -1, 7, 10]
->>>
+>>> list2 = []    
+>>> list2 = MyList()
+>>> list2.print_sorted()
+[]
+>>

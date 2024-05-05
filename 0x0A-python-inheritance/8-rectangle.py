@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+"""MOdule to import the BaseGeometry class"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+
 """Class that inherits from BaseGeometry"""
 class Rectangle(BaseGeometry):
     """Instantion of values width and height"""
