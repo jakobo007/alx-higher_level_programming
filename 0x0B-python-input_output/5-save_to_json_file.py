@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Imported modlues"""
 import json
 """Function that writes an object to a text file as JSON"""
 
