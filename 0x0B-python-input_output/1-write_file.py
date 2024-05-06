@@ -3,6 +3,7 @@
 
 def write_file(filename="", text=""):
     
+    
     """Must use with statement
     Return number of characters written
     """
