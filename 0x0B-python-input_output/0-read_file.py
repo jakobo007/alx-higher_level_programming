@@ -4,5 +4,5 @@
 def read_file(filename=""):
     """Must use the with statement"""
     with open(filename, 'r', encoding="utf-8") as f:
-        read_data = f.read()
-        print(read_data)
+        for line in f:
+            print(line, end="")
