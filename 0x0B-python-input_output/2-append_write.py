@@ -2,8 +2,8 @@
 """Function that appends a string at the end of a text file (UTF8)"""
 
 
-def append_write(filename="", text=""):  
-   
+def append_write(filename="", text=""):
+
     """if the file doesn't exist it should be created
     Must use with statement
     """

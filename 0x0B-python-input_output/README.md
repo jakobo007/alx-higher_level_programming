@@ -65,3 +65,27 @@ Methods of File Objects:
             >>> f = open('workfile', 'rb+')
             >>> f.write(b'0123456789abcdef')
             16
+
+
+
+Saving structured data with json:
+
+        JSON (JavaScript Object Notation) is a lightweight data interchange format commonly used for transmitting data between a server and a web application, or between different parts of an application. It's based on a subset of the JavaScript programming language and is easy for humans to read and write, while also being easy for machines to parse and generate.
+
+    ******************
+        The standard module called json can take Python data hierarchies, and convert them to string representations; this process is called serializing. Reconstructing the data from the string representation is called deserializing. Between serializing and deserializing, the string representing the object may have been stored in a file or data, or sent over a network connection to some distant machine.
+
+        ***********
+
+    Here's a list of commonly used JSON functions in Python's built-in `json` module:
+
+        1. `json.loads()`: Converts a JSON string into a Python object.
+        2. `json.dumps()`: Converts a Python object into a JSON string.
+        3. `json.load()`: Reads JSON data from a file-like object and parses it into a Python object.
+        4. `json.dump()`: Writes a Python object to a file-like object in JSON format.
+        5. `json.JSONDecoder()`: Decodes JSON data incrementally.
+        6. `json.JSONEncoder()`: Encodes Python objects into JSON format.
+        7. `json.dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)`: Serialize obj as a JSON formatted stream to fp.
+        8. `json.dumps(obj, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw)`: Serialize obj to a JSON formatted str.
+
+    These functions provide a convenient way to work with JSON data in Python, allowing you to serialize and deserialize JSON strings, read and write JSON data to files, and customize the JSON encoding and decoding process.
