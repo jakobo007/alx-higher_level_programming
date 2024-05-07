@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """A class Student that defines a student"""
+
+
 class Student():
-
-
     """Attributes intialization"""
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
@@ -14,9 +14,9 @@ class Student():
         """Return a dictionary representation of the student."""
         if attrs is None or not isinstance(attrs, list):
             return {
-            "first_name": self.first_name,
-            "last_name": self.last_name,
-            "age": self.age
+                "first_name": self.first_name,
+                "last_name": self.last_name,
+                "age": self.age
             }
         else:
             return {
