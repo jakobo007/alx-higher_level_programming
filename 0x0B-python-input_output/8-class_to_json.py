@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""function that converts an instance of a class with serializable attributes"""
+"""function that converts class instance with serializable attributes"""
 """into a dictionary that is ready for JSON serialization"""
+
 
 def class_to_json(obj):
     """Obj is instance of a class
