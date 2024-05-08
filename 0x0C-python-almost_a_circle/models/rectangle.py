@@ -6,7 +6,7 @@ import json
 
 
 class Rectangle(Base):
-    
+
     """Class constructor"""
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
@@ -18,7 +18,7 @@ class Rectangle(Base):
     @property
     def width(self):
         return self.__width
-    
+
     @width.setter
     def width(self, value):
         if not isinstance(value, int):
@@ -31,7 +31,7 @@ class Rectangle(Base):
     @property
     def height(self):
         return self.__height
-    
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
@@ -44,7 +44,7 @@ class Rectangle(Base):
     @property
     def x(self):
         return self.__x
-    
+
     @x.setter
     def x(self, value):
         if value < 0:
@@ -55,7 +55,7 @@ class Rectangle(Base):
     @property
     def y(self):
         return self.__y
-    
+
     @y.setter
     def y(self, value):
         if value < 0:
@@ -78,7 +78,8 @@ class Rectangle(Base):
 
     def __str__(self):
         """returns output in below format"""
-        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}/{self.height}"
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} -
+        {self.width}/{self.height}"
 
     def update(self, *args, **kwargs):
         """Public method that assigns an argument to each attribute"""
