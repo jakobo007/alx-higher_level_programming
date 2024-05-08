@@ -5,9 +5,9 @@ import json
 
 class Base:
     __nb_objects = 0
-    
-    """Class constructor"""
+
     def __init__(self, id=None):
+        """Class constructor"""
         if id is not None:
             self.id = id
         else:
