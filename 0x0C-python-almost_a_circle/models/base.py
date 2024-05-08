@@ -25,11 +25,11 @@ class Base:
             return json.dumps(list_dictionaries)
 
     def save_to_file(cls, list_objs):
-        """method that writes json re to a file"""
+        """method that writes json rep to a file"""
         if isinstance(list_objs, None):
             list_objs = []
             return list_objs
-        elif isinstance(list_objs, Base):
-            with open("{tyep().json}", 'w', encoding='utf-8') as f:
-                f.write()
-            
+        json_string_data = cls.to_json_string(list_objs)
+        filename = f'{cls.__name__}.json'
+        with open(filename, 'w', encoding="utf-8") as f:
+            f.write(json_string_data)
