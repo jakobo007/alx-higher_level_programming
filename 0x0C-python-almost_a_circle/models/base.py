@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Imported modules"""
 import json
 """A class Base"""
 
