@@ -21,9 +21,10 @@ class Base:
         """Return the json string rep of list_dictionaries"""
         if not isinstance(list_dictionaries, list):
             return "[]"
+        elif list_dictionaries is None:
+            return "[]"
         else:
             return json.dumps([obj.to_dictionary() for obj in list_dictionaries])
-
     @classmethod
     def save_to_file(cls, list_objs):
         """method that writes json rep to a file"""
