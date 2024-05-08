@@ -4,6 +4,7 @@ import json
 
 
 class Base:
+    """Our Base parent class"""
     __nb_objects = 0
 
     def __init__(self, id=None):
