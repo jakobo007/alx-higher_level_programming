@@ -8,7 +8,7 @@
 CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 
 --check if the user exists
-SELECT COUNT(*) INTO @count FROM mysql.user WHERE user = 'user_0d_d' AND host = 'localhost'
+SELECT COUNT(*) INTO @count FROM mysql.user WHERE user = 'user_0d_2' AND host = 'localhost';
 
 -- create the user if it doesn't exist
 SET @create_user = IF(@count = 0,
