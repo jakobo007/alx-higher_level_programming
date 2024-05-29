@@ -20,5 +20,5 @@ GRANT SELECT
 ON *.*
 TO 'user_0d_2'@'localhost' WITH GRANT OPTION;
 
--- flush priviledges to ensure changes take effect:
+-- flush priviledges to ensure changes take effect
 FLUSH PRIVILEGES;
