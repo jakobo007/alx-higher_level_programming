@@ -6,7 +6,7 @@
 USE hbtn_0d_usa;
 
 -- list all cities with corresponding state name
-SELECT cities.id, cities.name, states.name AS state_name
-FROM cities, states
-WHERE cities.state_id = state_id
+SELECT cities.id, cities.name, states.name 
+FROM cities
+JOIN states ON cities.sate_id = states.id
 ORDER BY cities.id ASC;
