@@ -18,4 +18,7 @@ SET @create_user = IF(@count = 0,
 -- grant SELECT priviledge
 GRANT SELECT
 ON *.*
-TO user_0d_2;
+TO 'user_0d_2'@'localhost' WITH GRANT OPTION;
+
+-- flush priviledges to ensure changes take effect:
+FLUSH PRIVILEGES;
