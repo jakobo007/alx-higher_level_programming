@@ -11,3 +11,11 @@ CREATE DATABASE IF NOT EXISTS hbtn_0d_2;
 SELECT COUNT(*) INTO @count FROM mysql.user WHERE user = 'user_0d_d' AND host = 'localhost'
 
 -- create the user if it doesn't exist
+SET @create_user = IF(@count = 0,
+    CREATE USER 'user_0d_2'@'localhost' IDENTIFIED BY 'user_0d_2_pwd' ;, 'SELECT "User already exists";'   
+);
+
+-- grant SELECT priviledge
+GRANT SELECT
+ON *.*
+TO user_0d_2;
