@@ -10,4 +10,3 @@ if (isNaN(parseInt(size))) {
         console.log(myVar.repeat(size));
     }
 }
-

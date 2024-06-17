@@ -11,4 +11,3 @@ if (isNaN(parseInt(x))) {
         console.log(myVar);
     }
 }
-
