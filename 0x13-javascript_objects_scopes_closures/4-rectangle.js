@@ -19,14 +19,19 @@ class Rectangle {
 
     rotate() {
         //exchanges the width and height of rectangle
-        this.height = w;
-        this.width = h;
+        if (this.width && this.height) {
+		const temp = this.width;
+		this.width = this.height;
+		this.height = temp;
+	}
     }
     
     double() {
         //multiplies the width and height by 2
-        this.width = w * 2;
-        this.height = h * 2;
+        if (this.width && this.height) {
+		this.width *= 2;
+		this.height *= 2;
+	}
     }
 }
 
