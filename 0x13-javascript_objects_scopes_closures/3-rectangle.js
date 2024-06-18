@@ -8,9 +8,9 @@ class Rectangle {
     }
 
     print() {
-        for (i = 0; i < w; i++) {
-            for (j = 0; j < h; j++) {
-                console.log("X");
+        if (this.width && this.height) {
+            for (let i = 0; i < this.height; i++) {
+                console.log('X'.repeat(this.width));
             }
         }
     }
