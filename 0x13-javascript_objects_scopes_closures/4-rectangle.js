@@ -16,6 +16,18 @@ class Rectangle {
             }
         }
     }
+
+    rotate() {
+        //exchanges the width and height of rectangle
+        this.height = w;
+        this.width = h;
+    }
+    
+    double() {
+        //multiplies the width and height by 2
+        this.width = w * 2;
+        this.height = h * 2;
+    }
 }
 
 module.exports = Rectangle;
