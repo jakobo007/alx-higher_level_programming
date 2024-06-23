@@ -1,8 +1,10 @@
 #!/usr/bin/python3
+"""Imported Modules"""
 import MySQLdb
 import sys
 
 def list_states(username, password, db_name):
+    """List all items in database"""
     db = MySQLdb.connect(host="localhost", port=3306, passwd=password, user=username, db=db_name)
     cursor = db.cursor()
     cursor.execute("SELECT id, name FROM states ORDER BY id ASC")
@@ -10,8 +12,7 @@ def list_states(username, password, db_name):
     
     for state in states:
         print(f"({state[0]}, '{state[1]}')")
-    
-    # Close the cursor and database connection
+
     cursor.close()
     db.close()
 
