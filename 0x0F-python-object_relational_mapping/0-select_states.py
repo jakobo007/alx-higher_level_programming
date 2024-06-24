@@ -3,6 +3,7 @@
 import MySQLdb
 import sys
 
+
 def list_states(username, password, db_name):
     """List all items in database"""
     db = MySQLdb.connect(host="localhost", port=3306,
