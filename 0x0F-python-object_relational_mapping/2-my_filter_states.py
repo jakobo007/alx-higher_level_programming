@@ -23,8 +23,8 @@ def list_states(username, password, db_name, search_item):
 if __name__ == "__main__":
     
     if len(sys.argv) == 5:
-        username = argv[1]
-        password = argv[2]
-        db_name = argv[3]
-        search_item = argv[4]
+        username = sys.argv[1]
+        password = sys.argv[2]
+        db_name = sys.argv[3]
+        search_item = sys.argv[4]
         list_states(username, password, db_name, search_item)
