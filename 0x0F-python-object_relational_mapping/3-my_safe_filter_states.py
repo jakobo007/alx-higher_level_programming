@@ -12,7 +12,7 @@ def list_states(username, password, db_name, search_item):
     query = "SELECT * FROM states WHERE name = %s ORDER BY id ASC"
     cursor.execute(query,(search_item,))
 
-    state = cursor.fetchall()
+    states = cursor.fetchall()
     for state in states:
         print(f"({state[0]}, '{state[1]}')")
 
@@ -26,3 +26,4 @@ if __name__ == "__main__":
         password = sys.argv[2]
         db_name = sys.argv[3]
         search_item = sys.argv[4]
+        list_states(username, password, db_name, search_item)

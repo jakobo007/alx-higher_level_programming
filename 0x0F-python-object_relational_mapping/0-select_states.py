@@ -21,7 +21,7 @@ def list_states(username, password, db_name):
     states = cursor.fetchall()
     
     for state in states:
-        print(f"{state[0]}, '{state[1]}'")
+        print(f"({state[0]}, '{state[1]}')")
     
     cursor.close()
     db.close()
@@ -30,7 +30,7 @@ def list_states(username, password, db_name):
     
 if __name__ == "__main__":
     if len(sys.argv) == 4:
-        username == sys.argv[1]
-        password == sys.argv[2]
-        db_name == sys.argv[3]
+        username = sys.argv[1]
+        password = sys.argv[2]
+        db_name = sys.argv[3]
         list_states(username, password, db_name)
