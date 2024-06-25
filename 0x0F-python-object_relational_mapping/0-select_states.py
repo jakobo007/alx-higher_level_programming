@@ -21,7 +21,7 @@ def list_states(username, password, db_name):
     states = cursor.fetchall()
     
     for state in states:
-        print(f"{state[0]}, '{state[1]}'")
+        print(f"({state[0]}, '{state[1]}')")
     
     cursor.close()
     db.close()
