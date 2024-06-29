@@ -11,14 +11,14 @@ def list_cities(username, password, db_name, state_name):
     query = """
     SELECT cities.name
     FROM cities
-    JOIN state ON cities.state_id = states.id
-    WHERE state.name = %s
+    JOIN states ON cities.state_id = states.id
+    WHERE states.name = %s
     ORDER BY cities.id ASC
     """
     cursor.execute(query, (state_name,))
     cities = cursor.fetchall()
-    for city in cities:
-        print(city)
+    city_names = [city[0] for city in cities]
+    print(", ".join(city_names))
         
     cursor.close()
     db.close()
