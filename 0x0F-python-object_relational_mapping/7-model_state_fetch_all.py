@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """List all State objects from hbtn_0e_6_usa"""
 from sqlalchemy import create_engine
-from sqlalchemy.ext.declartive import declarative_base
+from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 import sys
