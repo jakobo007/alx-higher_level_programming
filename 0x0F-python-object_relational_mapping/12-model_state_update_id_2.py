@@ -16,7 +16,7 @@ if __name__ == "__main__":
     session = Session()
     
     """Query the database and sort the results by state.id"""
-    state = session.query(State).filter_by(id=2).first()
+    state = session.query(State).filter(State.id=2).first()
     
     """query database and commit changes"""
     if state:
