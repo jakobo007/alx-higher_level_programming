@@ -16,10 +16,10 @@ if __name__ == "__main__":
     session = Session()
     
     """Query the database and sort the results by state.id"""
-    states = session.query(State).order_by(State.id).all()
+    states = session.query(State).filter(State.name.ilike('%a%')).order_by(State.id).all()
     
     """Print results"""
     for state in states:
         print(f"{state.id}: {state.name}")
-    
+
     session.close()

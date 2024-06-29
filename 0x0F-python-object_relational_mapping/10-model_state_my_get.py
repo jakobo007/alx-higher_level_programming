@@ -8,6 +8,7 @@ import sys
 
 if __name__ == "__main__":
     engine = create_engine('mysql+mysqldb://{}:{}@localhost:3306/{}'.format(sys.argv[1], sys.argv[2], sys.argv[3]), pool_pre_ping=True)
+    state_name = sys.argv[4]
     
     """Create a Session class"""
     Session = sessionmaker(bind=engine)
@@ -16,10 +17,11 @@ if __name__ == "__main__":
     session = Session()
     
     """Query the database and sort the results by state.id"""
-    states = session.query(State).order_by(State.id).all()
+    state = session.query(State).filter(State.name == state_name).first()
     
-    """Print results"""
-    for state in states:
-        print(f"{state.id}: {state.name}")
-    
+    if state:
+        print(f"{state.id}")
+    else:
+        print("Not Found")
+
     session.close()
