@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 """First State Model"""
-from sqlalchemy import Column, Integer, String, Create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
-engine = Create_engine('mysql+mysqlconnector://root:passowrd@localhost:3306/db_name')
+engine = create_engine('mysql+mysqlconnector://root:passowrd@localhost:3306/db_name')
 Base = declarative_base()
 
 class State(Base):
