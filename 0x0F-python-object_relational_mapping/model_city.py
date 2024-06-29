@@ -1,4 +1,4 @@
-#!/usr/bin/pyton3
+#!/usr/bin/python3
 """Imported modules"""
 from sqlalchemy import Column, String, create_engine, Integer, ForeignKey
 from model_state import Base
