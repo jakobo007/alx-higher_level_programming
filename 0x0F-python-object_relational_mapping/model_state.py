@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 """First State Model"""
-from sqlalchemy.orm import sessionmaker
 from sqlalchemy import Column, Integer, String, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 engine = create_engine('mysql+mysqlconnector://root:passowrd@localhost:3306/db_name')
