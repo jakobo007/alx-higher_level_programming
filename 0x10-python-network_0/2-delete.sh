@@ -1,5 +1,6 @@
 #!/bin/bash
-# Send a DELETE request 
-response=$(curl -s -X DELETE "$1")
+# Send a DELETE request
+url = "$1"
+response=$(curl -s -X DELETE "$url")
 echo $"response"
 
