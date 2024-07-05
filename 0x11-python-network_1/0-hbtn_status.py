@@ -2,7 +2,9 @@
 """Script that fetches a URL"""
 import urllib.request
 
+
 def fetch_url(url):
+    """fetch url"""
     with urllib.request.urlopen(url) as response:
         body = response.read()
         print("Body response:")
