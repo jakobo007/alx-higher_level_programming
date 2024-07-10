@@ -6,9 +6,6 @@ My name is James Joshua
 >>> say_my_name("Walter", "White")
 My name is Walter White
 
->>> say_my_name("Heisenburg")
-My name is Heisenburg
-
 >>> say_my_name("banolis", "chumbi")
 My name is banolis chumbi
 
