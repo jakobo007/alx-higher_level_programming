@@ -6,7 +6,9 @@ if __name__ == "__main__":
         print("{} arguments.".format(x))
     elif x == 1:
         print("{} argument".format(x))
+        for i in range(x):
+            print("{}: {:s}".format(i + 1, argv[1]))
     else:
         print("{} arguments:".format(x))
-    for i in range(x):
-        print("{}: {:s}".format(i + 1, argv[i + 1]))
+        for i in range(x):
+            print("{}: {:s}".format(i + 1, argv[i + 1]))
