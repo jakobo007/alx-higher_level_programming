@@ -1,12 +1,9 @@
 #!/usr/bin/python3"""
 """A function that divides all elements of a mtrix"""
+
+
 def matrix_divided(matrix, div):
-    """
-    matrix must be a list of integers or floats otherwise raise typeerror
-    each row of matrix must be same size
-    div must be a number(integer or float)
-    return a new list with the value rounded to 2dp
-    """
+    """return a new list, value rounded to 2dp"""
     for row in matrix:
         if not isinstance(row, list):
             raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
