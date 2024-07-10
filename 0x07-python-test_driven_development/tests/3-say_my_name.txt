@@ -1,21 +1,22 @@
-say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
 >>> say_my_name("James", "Joshua")
 My name is James Joshua
-    
+
 >>> say_my_name("Walter", "White")
 My name is Walter White
-    
+
 >>> say_my_name("Heisenburg")
 My name is Heisenburg
-    
+
 >>> say_my_name("banolis", "chumbi")
 My name is banolis chumbi
-    
+
 >>> say_my_name(12, "chumbi")
 Traceback (most recent call last):
     ...
 TypeError: first_name must be a string
-    
+
 >>> say_my_name("banolis", 12)
 Traceback (most recent call last):
     ...
