@@ -1,23 +1,30 @@
-#!/usr/bin/python3"""
-"""A function that divides all elements of a mtrix"""
+#!/usr/bin/python3
+"""
+A function that divides all elements of a matrix
+"""
 
 
 def matrix_divided(matrix, div):
-    """return a new list, value rounded to 2dp"""
-    for row in matrix:
-        if not isinstance(row, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-        for value in row:
-            if not isinstance(value, (int, float)):
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    """
+    Return a new matrix
+    """
+    if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
-        row_size = len(matrix[0])
-        if len(row) != row_size:
-            raise TypeError("Each row of the matrix must have the same size")
+    for row in matrix:
+        if not all(isinstance(value, (int, float)) for value in row):
+            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+
+    row_size = len(matrix[0])
+    if not all(len(row) == row_size for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+
+    if not isinstance(div, (int, float)):
+        raise TypeError("div must be a number")
 
     if div == 0:
-        raise ZeroDivisionError("division by 0")
+        raise ZeroDivisionError("division by zero")
 
-    new_matrix = [[round(val / div, 2) for val in row] for row in matrix]
+    new_matrix = [[round(value / div, 2) for value in row] for row in matrix]
 
     return new_matrix
