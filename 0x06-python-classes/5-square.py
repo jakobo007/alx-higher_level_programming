@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """A python class with private instance"""
 
+
 class Square:
     """Private instance attribute size"""
-
     def __init__(self, size=0):
         self.size = size
 
@@ -29,5 +29,3 @@ class Square:
         else:
             for _ in range(self.size):
                 print('#' * self.size)
-
-        
