@@ -1,29 +1,23 @@
 #!/usr/bin/python3
-"""Imported modules"""
+"""Sends a POST request to http://0.0.0.0:5000/search_user with a given letter.
+Usage: ./8-json_api.py <letter>
+  - The letter is sent as the value of the variable `q`.
+  - If no letter is provided, sends `q=""`.
+"""
 import sys
 import requests
 
 
-def search_api(letter, url):
-    """sends post request to url with letter as parameter"""
-    data = {'q': letter}
-    if not letter:
-        data['q'] = ""
-        
-    response = requests.post(url, data=data)
-    response_json = response.json()
-    
-    """check if json is valid"""
-    if isinstance(response_json, list) and len(response_json) > 0:
-        user = response_json[0]
-        print(f"{user.get('id')}, {user.get('name')}")
-    elif response_json == {}:
-        print("No result")
-    else:
-        print("Not a valid JSON")
-
-    
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/search_user"
-    letter = sys.argv[1]
-    search_api(letter, url)
+    letter = "" if len(sys.argv) == 1 else sys.argv[1]
+    payload = {"q": letter}
+
+    r = requests.post("http://0.0.0.0:5000/search_user", data=payload)
+    try:
+        response = r.json()
+        if response == {}:
+            print("No result")
+        else:
+            print("[{}] {}".format(response.get("id"), response.get("name")))
+    except ValueError:
+        print("Not a valid JSON")

@@ -13,7 +13,8 @@ def fetch_url(url):
             print(result)
     except urllib.error.HTTPError as error:
         print("Error code:", error.code)
-        
+
+
 if __name__ == "__main__":
     url = sys.argv[1]
     fetch_url(url)
