@@ -1,27 +1,14 @@
 #!/usr/bin/python3
-"""Imported modules"""
+"""Uses the GitHub API to display a GitHub ID based on given credentials.
+Usage: ./10-my_github.py <GitHub username> <GitHub password>
+  - Uses Basic Authentication to access the ID.
+"""
 import sys
 import requests
-
-
-def my_github(username, password):
-    """used git credentials to display id"""
-    url = "https://api.github.com/user"
-    auth = (username, password)
-    headers = {'Accept': 'application/vnd.github.v3+json'}
-
-    response = requests.get(url, auth=auth, headers=headers)
-
-    """handle request"""
-    if response.status_code == 200:
-        """if successful"""
-        info = response.json()
-        print(f"{info['id']}")
-    else:
-        print("None")
+from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    my_github(username, password)
+    auth = HTTPBasicAuth(sys.argv[1], sys.argv[2])
+    r = requests.get("https://api.github.com/user", auth=auth)
+    print(r.json().get("id"))
