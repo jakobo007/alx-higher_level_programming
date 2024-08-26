@@ -4,7 +4,7 @@ const request = require('request');
 const charID = 18;
 const URL = process.argv[2];
 
-request(URL, (err, body) => {
+request(URL, (err, response, body) => {
   if (err) {
     console.log(err);
   } else {
