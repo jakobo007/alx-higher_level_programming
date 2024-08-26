@@ -2,7 +2,7 @@
 
 const request = require('request');
 const charID = 18;
-const URL = process.argv[2]
+const URL = process.argv[2];
 
 request(URL, (err, body) => {
   if (err) {
