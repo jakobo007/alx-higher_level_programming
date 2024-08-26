@@ -12,7 +12,7 @@ request(URL, (err, body) => {
     let count = 0;
 
     data.results.forEach(film => {
-        if (film.characters.includes(`${URL}/${charID}/`)) {
+        if (film.characters.includes(`${URL}/${charID}`)) {
             count++;
         }
     });

@@ -4,7 +4,7 @@ const request = require('request');
 const movieID = process.argv[2];
 const API = `https://swapi-api.alx-tools.com/api/films/${movieID}`;
 
-request(API,(error, response, body) => {
+request(API, (error, response, body) => {
   if (error) {
     console.log(error);
   } else {
