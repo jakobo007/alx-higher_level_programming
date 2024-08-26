@@ -1,0 +1,1 @@
+Web scrapping is the process of using bots to extract content from a website.
