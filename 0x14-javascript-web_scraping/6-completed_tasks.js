@@ -11,12 +11,12 @@ request(url, (error, response, body) => {
     const completedTaskByUser = {};
 
     tasks.forEach(task => {
-        if(task.completed) {
-            if (!completedTaskByUser[task.UserId]) {
-                completedTaskByUser[task.UserId] = 0;
-            }
-            completedTaskByUser[task.UserId]++;
+      if (task.completed) {
+        if (!completedTaskByUser[task.userId]) {  // Changed 'UserId' to 'userId'
+          completedTaskByUser[task.userId] = 0;
         }
+        completedTaskByUser[task.userId]++;
+      }
     });
     console.log(completedTaskByUser);
   }
