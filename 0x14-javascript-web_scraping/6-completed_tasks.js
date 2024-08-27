@@ -12,7 +12,7 @@ request(url, (error, response, body) => {
 
     tasks.forEach(task => {
       if (task.completed) {
-        if (!completedTaskByUser[task.userId]) {  // Changed 'UserId' to 'userId'
+        if (!completedTaskByUser[task.userId]) {
           completedTaskByUser[task.userId] = 0;
         }
         completedTaskByUser[task.userId]++;
