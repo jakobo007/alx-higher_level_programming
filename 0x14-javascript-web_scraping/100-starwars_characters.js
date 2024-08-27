@@ -10,6 +10,7 @@ request(URL, (error, response, body) => {
   } else {
     const data = JSON.parse(body);
     const characters = data.characters;
+    const species = data.species;
     const vehicles = data.vehicles;
 
     characters.forEach(character => {
@@ -32,6 +33,17 @@ request(URL, (error, response, body) => {
           console.log(vehicleData.name);
         }
       })
+    });
+
+    species.forEach(specie => {
+    request(specie, (error, response, body) => {
+      if (error) {
+        console.log(error);
+      } else {
+        const specieData = JSON.parse(body);
+        console.log(specieData.name);
+      }
     })
+    });
   }
 });
