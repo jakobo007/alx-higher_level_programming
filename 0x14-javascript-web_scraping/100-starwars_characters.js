@@ -10,6 +10,7 @@ request(URL, (error, response, body) => {
   } else {
     const data = JSON.parse(body);
     const characters = data.characters;
+    const vehicles = data.vehicles;
 
     characters.forEach(character => {
       request(character, (error, response, body) => {
@@ -21,5 +22,16 @@ request(URL, (error, response, body) => {
         }
       });
     });
+
+    vehicles.forEach(vehicle => {
+      request(vehicle, (error, response, body) => {
+        if (error) {
+          console.log(error);
+        } else {
+          const vehicleData = JSON.parse(body);
+          console.log(vehicleData.name);
+        }
+      })
+    })
   }
 });
