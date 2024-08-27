@@ -11,13 +11,15 @@ request(URL, (error, response, body) => {
     const data = JSON.parse(body);
     const characters = data.characters;
 
-    characters.forEach(character, (error, response, body) => {
-      if (error) {
-        console.log(error);
-      } else {
-        const cast = JSON.parse(body);
-        console.log(cast.name);
-      }
-    })
+    characters.forEach(character => {
+      request(character, (error, repsonse, body) => {
+        if (error) {
+            console.log(error);
+        } else {
+            const characterData = JSON.parse(body);
+            console.log(characterData.name);
+        }
+      });
+    });
   }
 });
